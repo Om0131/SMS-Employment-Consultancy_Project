@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title> Sign Up </title>
+ 	    <link href="stylesheet.css"  rel="stylesheet"/>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    </head>
+    <body class = "body">
+            <div class = "Container">
+            <form autocomplete="off" class = "form_outline">
+                <fieldset class = "field_border">
+                    <h1 class = "header"> Sign Up </h1>
+                    <div>
+                        <input type = "text" name = "username" placeholder= " &#xf007; Username" required/><br><br>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder= " &#xf0e0; Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}" 
+                        oninvalid="setCustomValidity('Please enter valid Email')"
+                        onchange="try{setCustomValidity('')}catch(e){} " required/><br><br>
+                    </div> 
+                    <div>
+                        <input type="text" name="mobile no." placeholder= "&#xf10b; Mobile no." pattern="[0-9]{10}" 
+                        oninvalid="setCustomValidity('Field must contain only digits with max-min length of 10')"
+                        onchange="try{setCustomValidity('')}catch(e){} " required/><br><br>
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder= "&#xf084; Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        oninvalid="setCustomValidity('Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" 
+                        onchange="try{setCustomValidity('')}catch(e){} " required/><br><br>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name = "checkbox" 
+                        oninvalid="setCustomValidity('Must Accept Terms and Conditions')"
+                        onchange="try{setCustomValidity('')}catch(e){} " required>
+                        <label for="Terms And Conditions" name="checkbox" class="label">I Agree to <a href="" class = "link2">Terms and Conditions</a></label>
+                    </div>
+                        <input type="submit" value="Sign Up"/>
+                    <div>
+                        <h2 class = "header2">Already Have an Account? <a class = "link" href="">Login Here</a></h2>
+                    </div>
+                    
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
